@@ -78,7 +78,7 @@ export class DataService {
 
     public async getSpaces(): Promise<Space[]> {
         if (this.user) {
-            console.log(`Using token: ${this.getUserIdToken()}`)
+            // console.log(`Using token: ${this.getUserIdToken()}`)
             const requestUrl = appConfig.api.spacesUrl;
             const requestResult = await fetch(
                 requestUrl, {

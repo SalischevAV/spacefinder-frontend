@@ -47,7 +47,7 @@ export class CreateSpace extends Component<ICreateSpaceProps, ICreateSpaceState>
             const id = await this.props.dataService.createSpace(stateClone);  
             alert(`Created space with id: ${id}`);
         } catch (error) {
-            alert(`Error while creating space: ${error.message}`);
+            alert(`Error while creating space: ${(error as Error).message}`);
         }
 
     }
